@@ -1,13 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+
+        <div class="modal">
+            <div class="pictures-info">
+                <div class="pictures-info-primary">
+                    <img
+                        src="./src/assets/01.jpg"
+                        alt="Main Picture Of Jumper"
+                    />
+                </div>
+
+                <div class="pictures-info-secondary">
+                    <div class="pictures-info-secondary-first">
+                        <img
+                        src="./src/assets/02.jpg"
+                        alt="Secondary Photo Of Jumper"
+                    />
+                    </div>
+                    <div class="pictures-info-secondary-second">
+                        <img
+                        src="./src/assets/03.jpg"
+                        alt="Secondary Photo Of Jumper"
+                        />
+                    </div >
+                    <div class="pictures-info-secondary-third">
+                        <img
+                        src="./src/assets/04.jpg"
+                        alt="Secondary Photo Of Jumper"
+                    />
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-info">
+                <div class="main-info-header">
+                    <span class="main-info-header-text">Футболка "Эволюционируй или сдохни"</span>
+
+                    <span class="main-info-price-text">100 баллов</span>
+
+                    <button type="button" class="btn">
+                        <span class="btn-text">Заказать</span>
+                    </button>
+                </div>
+
+                <div class="main-info-body">
+                    <div class="colors-block">
+                        <p class="colors-block-text">Цвета:</p>
+
+                        <div class="colors-toggle">
+                            <input class="blue-tog" type="radio" name="color" id="blue" checked>
+                            <label class="color colors-toggle-text blue-toggle-text" for="blue">Синий</label>
+
+                            <input class="beige-tog" type="radio" name="color" id="beige">
+                            <label class="color colors-toggle-text blue-toggle-text" for="beige">Бежевый</label>
+
+                            <input class="grey-tog" type="radio" name="color" id="grey">
+                            <label class="color colors-toggle-text blue-toggle-text" for="grey">Серый</label>
+                        </div>
+                    </div>
+
+                    <div class="sizes-block">
+                        <p class="sizes-block-text">Размер:</p>
+
+                        <div class="sizes-toggle">
+                            <input type="radio" name="size" id="s" checked>
+                            <label class="size size-toggle-text blue-toggle-text" for="s">S</label>
+
+                            <input type="radio" name="size" id="m" >
+                            <label class="size size-toggle-text blue-toggle-text" for="m">M</label>
+
+                            <input type="radio" name="size" id="l" >
+                            <label class="size size-toggle-text blue-toggle-text" for="l">L</label>
+                        </div>
+                    </div>
+
+                    <div class="footer-block">
+                        <div class="footer-block-details">
+                            <span class="footer-block-details-first">Детали:</span>
+                            <span class="footer-block-details-second">
+                                Брендированная толстовка от Qazaq Republic.
+                                Материал: Хлопок 80%, Вискоза 20%
+                            </span>
+                        </div>
+
+                        <div class="footer-block-additional-info">
+                            <span class="footer-block-add-first">
+                                Как выбрать размер:
+                            </span>
+                            <span class="footer-block-add-second">Написать дяде Рику для уточнения.</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="balance-info">
+                <div class="balance-text">
+                    <span class="your-balance">Твой баланс:</span>
+                    <p class="your-balance-points">3 945 баллов</p>
+                </div>
+                <img
+                    class="balance-icon"
+                    src="./src/assets/05.jpg"
+                    alt="Balance Icon Picture"
+                />
+            </div>
+
+            <div class="modal-close">
+                <img src="./src/assets/06.jpg" />
+            </div>
+        </div>
+
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
 </html>
