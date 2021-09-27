@@ -1,7 +1,12 @@
 body {
-    position: absolute;
     width: 1440px;
     height: 867px;
+}
+
+.modal-bg {
+    position: absolute;
+    width: 99%;
+    height: 99%;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -9,8 +14,9 @@ body {
     position: absolute;
     width: 1039px;
     height: 588px;
-    left: 200px;
-    top: 131px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 16px;
     background-color: #fff;
 }
@@ -28,16 +34,9 @@ body {
 }
 
 .pictures-info-primary img {
-    position: static;
     width: 330px;
     height: 330px;
-    left: 0;
-    top: 0;
     cursor: pointer;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 16px 0;
 }
 
 .pictures-info-secondary {
@@ -539,12 +538,13 @@ label.size {
     cursor: pointer;
 }
 
-.modal-close img {
-    background-color: lightblue;
+.modal-close {
+    background-image: url('../assets/06.jpg');
     position: absolute;
-    width: 32px;
-    height: 32px;
-    right: 25px;
+    width: 40px;
+    height: 40px;
+    right: 24px;
     top: 24px;
     cursor: pointer;
+    border: none;
 }
