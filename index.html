@@ -10,118 +10,201 @@
         <title>Vite App</title>
     </head>
     <body>
-        <div class="modal-bg">
-            <div class="modal">
-                <div class="pictures-info">
-                    <div class="pictures-info-primary">
-                        <img
-                            src="./src/assets/01.jpg"
-                            alt="Main Picture Of Jumper"
-                        />
-                    </div>
-
-                    <div class="pictures-info-secondary">
-                        <div class="pictures-info-secondary-first">
-                            <img
-                            src="./src/assets/02.jpg"
-                            alt="Secondary Photo Of Jumper"
-                        />
-                        </div>
-                        <div class="pictures-info-secondary-second">
-                            <img
-                            src="./src/assets/03.jpg"
-                            alt="Secondary Photo Of Jumper"
-                            />
-                        </div >
-                        <div class="pictures-info-secondary-third">
-                            <img
-                            src="./src/assets/04.jpg"
-                            alt="Secondary Photo Of Jumper"
-                        />
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <img src="src/assets/kolesa-logo.svg" alt="Kolesa Logo">
                 </div>
 
-                <div class="main-info">
-                    <div class="main-info-header">
-                        <span class="main-info-header-text">Футболка "Эволюционируй или сдохни"</span>
+                <div class="search-bar">
+                    <button>
+                        <input type="text" autocomplete="off" placeholder="Поиск">
+                    </button>
+                </div>
 
-                        <span class="main-info-price-text">100 баллов</span>
+                <button class="user">
+                    <div>
+                        <span class="user-name">Мортиджан</span>
+                        <span class="user-points">300 баллов</span>
+                    </div>
+                </button>
+            </div>
 
-                        <button type="button" class="btn">
-                            <span class="btn-text">Заказать</span>
+            <div class="body">
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">Оргсхема</a>
+                        </li>
+                        <li>
+                            <a href="#">Kolesa Team</a>
+                        </li>
+                        <li>
+                            <a class="selected" href="#">
+                                <span>Kolesa Shop</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Картина компании</a>
+                        </li>
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Education</a>
+                        </li>
+                        <li>
+                            <a href="#">Guidelines</a>
+                        </li>
+                        <li>
+                            <a href="#">Библиотека</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="body-main-block">
+                    <div class="point-blocks">
+                        <button class="accept-points">
+                            <span>Получить баллы</span>
+                        </button>
+
+
+                        <button class="how-to-accept-points">
+                            <span>Как получить баллы</span>
+                        </button>
+
+                        <button class="gave-points">
+                            <span>Подарить баллы</span>
                         </button>
                     </div>
 
-                    <div class="main-info-body">
-                        <div class="colors-block">
-                            <p class="colors-block-text">Цвета:</p>
+                    <div class="good-types">
+                        <input type="radio" name="type" id="all-goods" checked>
+                        <label class="all-goods-type" for="all-goods">
+                            Все товары
+                        </label>
 
-                            <div class="colors-toggle">
-                                <input class="blue-tog" type="radio" name="color" id="blue" checked>
-                                <label class="color colors-toggle-text blue-toggle-text" for="blue">Синий</label>
+                        <input type="radio" name="type" id="clothes">
+                        <label class="clothes-type" for="clothes">Одежда</label>
 
-                                <input class="beige-tog" type="radio" name="color" id="beige">
-                                <label class="color colors-toggle-text blue-toggle-text" for="beige">Бежевый</label>
+                        <input type="radio" name="type" id="accesses">
+                        <label class="accesses-type" for="accesses">Аксессуары</label>
+                    </div>
 
-                                <input class="grey-tog" type="radio" name="color" id="grey">
-                                <label class="color colors-toggle-text blue-toggle-text" for="grey">Серый</label>
+                    <div class="card-products">
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <span class="card-new">NEW</span>
+                            <div class="card-info">
+
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
                             </div>
                         </div>
-
-                        <div class="sizes-block">
-                            <p class="sizes-block-text">Размер:</p>
-
-                            <div class="sizes-toggle">
-                                <input type="radio" name="size" id="s" checked>
-                                <label class="size size-toggle-text blue-toggle-text" for="s">S</label>
-
-                                <input type="radio" name="size" id="m" >
-                                <label class="size size-toggle-text blue-toggle-text" for="m">M</label>
-
-                                <input type="radio" name="size" id="l" >
-                                <label class="size size-toggle-text blue-toggle-text" for="l">L</label>
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <span class="card-new">NEW</span>
+                            <div class="card-info">
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
                             </div>
                         </div>
-
-                        <div class="footer-block">
-                            <div class="footer-block-details">
-                                <span class="footer-block-details-first">Детали:</span>
-                                <span class="footer-block-details-second">
-                                    Брендированная толстовка от Qazaq Republic.
-                                    Материал: Хлопок 80%, Вискоза 20%
-                                </span>
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <div class="card-info">
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
                             </div>
-
-                            <div class="footer-block-additional-info">
-                                <span class="footer-block-add-first">
-                                    Как выбрать размер:
-                                </span>
-                                <span class="footer-block-add-second">Написать дяде Рику для уточнения.</span>
+                        </div>
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <div class="card-info">
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
                             </div>
-
+                        </div>
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <div class="card-info">
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <div class="card-info">
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <div class="card-info">
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <div class="card-info">
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <img src="src/assets/t-shirt.jpg" alt="Свитшот">
+                            <div class="card-info">
+                                <span class="card-info-points">220 баллов</span>
+                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
+                                <span class="card-info-sizes">Размеры S/M/L</span>
+                                <button class="card-info-btn">Заказать</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="balance-info">
-                    <div class="balance-text">
-                        <span class="your-balance">Твой баланс:</span>
-                        <p class="your-balance-points">3 945 баллов</p>
+            <div class="footer">
+                <div class="footer-info">
+                    <div class="socials">
+                        <span>© Kolesa Group</span>
+
+                        <div class="social-icons">
+                            <img class="icon-inst" src="./src/assets/social-instagram-icon.jpg" alt="Social Instagram">
+                            <img class="icon-youtube" src="./src/assets/social-youtube-icon.jpg" alt="Social Youtube">
+                            <img class="icon-vk" src="./src/assets/social-vk-icon.jpg" alt="Social VK">
+                        </div>
                     </div>
-                    <img
-                        class="balance-icon"
-                        src="./src/assets/05.jpg"
-                        alt="Balance Icon Picture"
-                    />
+
+                    <div class="suggestions">
+                        Есть идеи что улучшить?
+                        <br>
+                        Не знаешь, с кем решить проблему?
+                    </div>
                 </div>
 
-                <button class="modal-close" >
-                </button>
+                <button class="footer-btn">Написать</button>
             </div>
         </div>
-
-
 
         <script type="module" src="/src/js/main.js"></script>
     </body>
