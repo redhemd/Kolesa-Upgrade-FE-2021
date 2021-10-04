@@ -5,7 +5,7 @@
         <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,600&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vite App</title>
     </head>
@@ -16,21 +16,21 @@
                     <img src="src/assets/kolesa-logo.svg" alt="Kolesa Logo">
                 </div>
 
-                <div class="search-bar">
+                <form class="search-bar">
                     <button>
                         <input type="text" autocomplete="off" placeholder="Поиск">
                     </button>
-                </div>
+                </form>
 
                 <button class="user">
-                    <div>
+                    <span>
                         <span class="user-name">Мортиджан</span>
                         <span class="user-points">300 баллов</span>
-                    </div>
+                    </span>
                 </button>
             </div>
 
-            <div class="body">
+            <div class="main">
                 <div class="nav">
                     <ul>
                         <li>
@@ -40,8 +40,8 @@
                             <a href="#">Kolesa Team</a>
                         </li>
                         <li>
-                            <a href="#">
-                                <span class="selected">Kolesa Shop</span>
+                            <a class="selected" href="#">
+                                <span >Kolesa Shop</span>
                             </a>
                         </li>
                         <li>
@@ -68,16 +68,17 @@
                 <div class="body-main-block">
                     <div class="point-blocks">
                         <button class="accept-points">
+                            <span class="accept-points-icon">➕</span>
                             <span>Получить баллы</span>
                         </button>
 
-
                         <button class="how-to-accept-points">
+                            <span class="how-to-accept-points-icon">❓</span>
                             <span>Как получить баллы</span>
                         </button>
 
                         <button class="gave-points">
-                            <span>Подарить баллы</span>
+                            Подарить баллы
                         </button>
                     </div>
 
@@ -188,9 +189,9 @@
                         <span>© Kolesa Group</span>
 
                         <div class="social-icons">
-                            <img class="icon-inst" src="./src/assets/social-instagram-icon.jpg" alt="Social Instagram">
-                            <img class="icon-youtube" src="./src/assets/social-youtube-icon.jpg" alt="Social Youtube">
-                            <img class="icon-vk" src="./src/assets/social-vk-icon.jpg" alt="Social VK">
+                            <img class="icon-inst" src="./src/assets/social-instagram-icon.svg" alt="Social Instagram">
+                            <img class="icon-youtube" src="./src/assets/social-youtube-icon.svg" alt="Social Youtube">
+                            <img class="icon-vk" src="./src/assets/social-vk-icon.svg" alt="Social VK">
                         </div>
                     </div>
 

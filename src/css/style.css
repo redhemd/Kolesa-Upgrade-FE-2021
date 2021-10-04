@@ -2,21 +2,26 @@
 *::before,
 *::after {
     margin: 0;
-    padding: 0
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 4px;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto 1fr 1fr auto;
     grid-template-areas:
         'header header header header'
-        'body body body body'
-        'body body body body'
+        'main main main main'
+        'main main main main'
         'footer footer footer footer';
     overflow: hidden;
     min-height: 10vh;
@@ -29,7 +34,7 @@
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 10px;
+    grid-gap: 4px;
     grid-template-areas: 'logo search-bar search-bar user';
     margin-top: 25px;
     margin-left: 10px;
@@ -58,7 +63,7 @@
     border: none;
     width: 100%;
     height: 100%;
-    background: url('../assets/search-logo.jpg') 20px no-repeat;
+    background: url('../assets/search-logo.svg') 20px no-repeat;
     cursor: pointer;
     background-size: 20px 20px;
 }
@@ -68,7 +73,6 @@
     width: 230px;
     left: 25px;
     height: 97%;
-    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     line-height: 28px;
     color: #888b94;
@@ -82,14 +86,14 @@
     grid-area: user;
     display: flex;
     justify-content: flex-end;
-    width: 80%;
-    background: url('../assets/user-logo.jpg') 125px center no-repeat;
+    background: url('../assets/user-logo.jpg') center no-repeat;
     background-size: 45px 45px;
+    width: 270px;
+    height: 44.5px;
     border: none;
 }
 
 .user-name {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 16px;
     color: #2a81dd;
@@ -99,7 +103,6 @@
 
 .user-points {
     cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: black;
     display: flex;
@@ -109,8 +112,8 @@
     color: #2a81dd;
 }
 
-.body {
-    grid-area: body;
+.main {
+    grid-area: main;
     margin-top: 25px;
     margin-left: 10px;
     margin-right: 10px;
@@ -143,7 +146,6 @@
 
 .nav ul li a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: #1c1819;
 
@@ -152,7 +154,7 @@
 
 .nav ul li a:hover {
     color: #2a81dd;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .nav ul li a::before {
@@ -171,10 +173,6 @@
     transition: 0.5s ease;
 }
 
-.bold-text {
-    font-weight: bolder;
-}
-
 .selected {
     font-weight: bolder;
 }
@@ -182,8 +180,6 @@
 .selected::before {
     position: relative;
     content: '';
-
-    /* width: 0.01px; */
     height: 23px;
     border-radius: 50px;
     border: 1px solid #2a81dd;
@@ -208,29 +204,27 @@
     grid-area: point-blocks;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 4px;
 }
 
 .accept-points {
     border-radius: 16px;
     display: flex;
     align-items: center;
-    background: #eff8eb url('/src/assets/plus-icon.jpg') 50px center no-repeat;
-    background-size: 30px 30px;
+    background: #eff8eb;
     border: none;
     cursor: pointer;
-}
-
-.accept-points span {
-    position: relative;
-    margin-left: 120px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 32px;
 }
 
-.accept-points span:hover {
+.accept-points-icon {
+    font-size: 36px;
+    margin: 0 25px 0 40px;
+}
+
+.accept-points:hover {
     color: #2a81dd;
 }
 
@@ -238,22 +232,21 @@
     border-radius: 16px;
     display: flex;
     align-items: center;
-    background: #fffae7 url('/src/assets/question-mark-icon.jpg') 60px center no-repeat;
-    background-size: 22px 40px;
+    background: #fffae7;
     border: none;
     cursor: pointer;
-}
-
-.how-to-accept-points span {
-    position: relative;
-    margin-left: 110px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 32px;
 }
 
-.how-to-accept-points span:hover {
+.how-to-accept-points-icon {
+    font-size: 40px;
+    margin: 0 20px 0 40px;
+    color: red;
+}
+
+.how-to-accept-points:hover {
     color: #2a81dd;
 }
 
@@ -265,18 +258,13 @@
     background-size: 45px 45px;
     border: none;
     cursor: pointer;
-}
-
-.gave-points span {
-    position: relative;
-    margin-left: 130px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 32px;
+    padding-left: 115px;
 }
 
-.gave-points span:hover {
+.gave-points:hover {
     color: #2a81dd;
 }
 
@@ -284,7 +272,7 @@
     grid-area: good-types;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 4px;
 }
 
 input[type='radio'] {
@@ -344,7 +332,6 @@ input[type='radio']:checked + label:hover {
 }
 
 .good-types label {
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
@@ -376,10 +363,9 @@ input[type='radio']:checked + label:hover {
     bottom: 230px;
     background: #64bd38;
     border-radius: 4px;
-    font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: 12px;
-    padding: 1px 4px 1px 4px;
+    padding: 1px 8px 1px 4px;
     cursor: pointer;
 }
 
@@ -395,7 +381,6 @@ input[type='radio']:checked + label:hover {
 }
 
 .card-info-points {
-    font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
@@ -405,7 +390,6 @@ input[type='radio']:checked + label:hover {
 }
 
 .card-info-descr {
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 600;
     margin-left: 20px;
@@ -418,7 +402,6 @@ input[type='radio']:checked + label:hover {
 }
 
 .card-info-sizes {
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #888b94;
     margin-left: 20px;
@@ -449,17 +432,15 @@ input[type='radio']:checked + label:hover {
     border-radius: 8px;
     align-self: stretch;
     color: white;
-    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     cursor: pointer;
+    border: none;
 }
 
 .footer {
     grid-area: footer;
     background-color: black;
     margin-top: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1.7fr 0.3fr 0fr;
@@ -481,13 +462,9 @@ input[type='radio']:checked + label:hover {
     color: white;
     display: flex;
     flex-direction: column;
-
-    /* justify-content: center;
-    align-items: center; */
 }
 
 .socials span {
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     margin: 20px;
     cursor: pointer;
@@ -527,7 +504,6 @@ input[type='radio']:checked + label:hover {
 
 .suggestions {
     color: white;
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     margin: 20px;
     padding-top: 10px;
@@ -543,7 +519,6 @@ input[type='radio']:checked + label:hover {
     background: #fff;
     box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
     border-radius: 12px;
-    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 600;
     display: flex;
