@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" width="33" height="33">
+	<title>Новый проект</title>
+	<defs>
+		<image  width="100" height="100" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQMAAABKLAcXAAAAAXNSR0IB2cksfwAAAANQTFRF8vLzEwS6/QAAABRJREFUeJxjYBgFo2AUjIJRQE8AAAV4AAEI/UWDAAAAAElFTkSuQmCC"/>
+		<image  width="34" height="34" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAMAAAANmfvwAAAAAXNSR0IB2cksfwAAAGNQTFRFAAAAHBgYHBgaHBgZGxgZHBgZHBcZHRcZGxUVEBAQHRkZHBcZHRYaIBgYGxgYGxkZGBgYHBkZHBgYGxkZGxUbIBAgHBkZGxgYHRgZIRkZHBkZGhYWHBgYGxgaHBcZGhYaGxgYkOjm0QAAACF0Uk5TAEB/v9//748wEI+QUCCgjyDPgM8wEJCf3x/vUL+fz1DfraYZNgAAAPtJREFUeJzVk9tywyAMRCXDkjrOhRDbdVOS9v+/ssTtYBCaaV+rJ1lzWCSxJvoJ7owFnNm9kB5skMOwAvT7dH44HImOfEpa514S/gIXtmoArl5oXGCrkre41jp7QazMueoUEATR6FD2bBDaAQJMcQC2JWgqZWa8Kkgqb9oG2qboUNzk0OzpGR5LzgGNqOp/QCzeNGLCLecG7xrCiDkPGDTkXpQZN22kBYW11AfointWmcaLHvVCZyzSDItocHoIJhEQwv4BdPmr71zyuBSe5lS789PeH7sEDKNtGOK4/SSRV2s2DI1DTOc/Y/geRWVE/FdGtXbFnH4hEkP0BZIwC06FW2TLAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+	<use id="Слой 1" href="#img2" x="0" y="0" />
+</svg>
