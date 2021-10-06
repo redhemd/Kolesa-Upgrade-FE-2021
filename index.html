@@ -11,56 +11,56 @@
     </head>
     <body>
         <div class="container">
-            <div class="header">
-                <div class="logo">
+            <div class="header container__header">
+                <div class="logo header__logo">
                     <img src="src/assets/kolesa-logo.svg" alt="Kolesa Logo">
                 </div>
 
-                <form class="search-bar">
+                <form class="search-bar header__search-bar">
                     <button>
                         <input type="text" autocomplete="off" placeholder="Поиск">
                     </button>
                 </form>
 
-                <button class="user">
+                <button class="user header__user">
                     <span>
-                        <span class="user-name">Мортиджан</span>
-                        <span class="user-points">300 баллов</span>
+                        <span class="user__name">Мортиджан</span>
+                        <span class="user__points">300 баллов</span>
                     </span>
                 </button>
             </div>
 
-            <div class="main">
-                <div class="nav">
+            <div class="main container__main">
+                <div class="nav main__nav">
                     <ul>
                         <li>
-                            <a href="#">Оргсхема</a>
+                            <a class="nav__item" href="#">Оргсхема</a>
                         </li>
                         <li>
-                            <a href="#">Kolesa Team</a>
+                            <a class="nav__item" href="#">Kolesa Team</a>
                         </li>
                         <li>
-                            <a class="selected" href="#">
+                            <a class="nav__item nav__item_active" href="#">
                                 <span >Kolesa Shop</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">Картина компании</a>
+                            <a class="nav__item" href="#">Картина компании</a>
                         </li>
                         <li>
-                            <a href="#">Новости</a>
+                            <a class="nav__item" href="#">Новости</a>
                         </li>
                         <li>
-                            <a href="#">Education</a>
+                            <a class="nav__item" href="#">Education</a>
                         </li>
                         <li>
-                            <a href="#">Guidelines</a>
+                            <a class="nav__item" href="#">Guidelines</a>
                         </li>
                         <li>
-                            <a href="#">Библиотека</a>
+                            <a class="nav__item" href="#">Библиотека</a>
                         </li>
                         <li>
-                            <a href="#">FAQ</a>
+                            <a class="nav__item" href="#">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -68,12 +68,12 @@
                 <div class="body-main-block">
                     <div class="point-blocks">
                         <button class="accept-points">
-                            <span class="accept-points-icon">➕</span>
+                            <span class="accept-points__icon">➕</span>
                             <span>Получить баллы</span>
                         </button>
 
                         <button class="how-to-accept-points">
-                            <span class="how-to-accept-points-icon">❓</span>
+                            <span class="how-to-accept-points__icon">❓</span>
                             <span>Как получить баллы</span>
                         </button>
 
@@ -82,127 +82,131 @@
                         </button>
                     </div>
 
-                    <div class="good-types">
+                    <div class="good-types body-main-block__good-types">
                         <input type="radio" name="type" id="all-goods" checked>
-                        <label class="all-goods-type" for="all-goods">
+                        <label class="good-types__all" for="all-goods">
                             Все товары
                         </label>
 
                         <input type="radio" name="type" id="clothes">
-                        <label class="clothes-type" for="clothes">Одежда</label>
+                        <label class="good-types__clothes" for="clothes">Одежда</label>
 
                         <input type="radio" name="type" id="accesses">
-                        <label class="accesses-type" for="accesses">Аксессуары</label>
+                        <label class="good-types__accesses" for="accesses">Аксессуары</label>
                     </div>
 
                     <div class="card-products">
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <span class="card-new">NEW</span>
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+                            <span class="product__card-new">NEW</span>
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <span class="card-new">NEW</span>
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+                            <span class="product__card-new">NEW</span>
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product card-products__product">
                             <img src="src/assets/t-shirt.jpg" alt="Свитшот">
-                            <div class="card-info">
-                                <span class="card-info-points">220 баллов</span>
-                                <span class="card-info-descr">Футболка "Эволюционируй или ...</span>
-                                <span class="card-info-sizes">Размеры S/M/L</span>
-                                <button class="card-info-btn">Заказать</button>
+                            <div class="product__card-info">
+                                <span class="product__card-info__points">220 баллов</span>
+                                <span class="product__card-info__descr">Футболка "Эволюционируй или ...</span>
+                                <span class="product__card-info__sizes">Размеры S/M/L</span>
+                                <button class="product__card-info__btn">Заказать</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="footer">
-                <div class="footer-info">
-                    <div class="socials">
-                        <span>© Kolesa Group</span>
+            <div class="footer container__footer">
+                <div class="footer-info footer__footer-info">
 
+                        <span>© Kolesa Group</span>
                         <div class="social-icons">
                             <img class="icon-inst" src="./src/assets/social-instagram-icon.svg" alt="Social Instagram">
                             <img class="icon-youtube" src="./src/assets/social-youtube-icon.svg" alt="Social Youtube">
                             <img class="icon-vk" src="./src/assets/social-vk-icon.svg" alt="Social VK">
                         </div>
-                    </div>
 
-                    <div class="suggestions">
-                        Есть идеи что улучшить?
-                        <br>
-                        Не знаешь, с кем решить проблему?
-                    </div>
                 </div>
 
-                <button class="footer-btn">Написать</button>
+                <div class="suggestions footer__suggestions">
+                    <span class="suggestions__text">Есть идеи что улучшить?</span>
+                    <span>Не знаешь, с кем решить проблему?</span>
+                </div>
+
+                <button class="footer-btn footer__footer-btn">Написать</button>
             </div>
         </div>
 

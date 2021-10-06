@@ -1,0 +1,15 @@
+.footer-btn {
+    grid-area: footer-btn;
+    background: $white;
+
+    @include box-shadow(0, 2px, 4px);
+
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $blue;
+    cursor: pointer;
+}

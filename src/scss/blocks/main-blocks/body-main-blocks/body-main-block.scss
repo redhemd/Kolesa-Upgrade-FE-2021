@@ -1,0 +1,21 @@
+.body-main-block {
+    grid-area: main-menu;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4% 2% 33%;
+    grid-gap: 40px;
+    grid-template-areas:
+        'point-blocks point-blocks point-blocks'
+        'good-types . .'
+        'card-products card-products card-products';
+
+    &__good-types {
+        & label {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: $blue;
+        }
+    }
+}

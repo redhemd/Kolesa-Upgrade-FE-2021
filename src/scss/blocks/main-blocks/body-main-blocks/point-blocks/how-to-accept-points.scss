@@ -1,0 +1,21 @@
+.how-to-accept-points {
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background: $light-yellow;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+
+    &__icon {
+        font-size: 40px;
+        margin: 0 20px 0 40px;
+        color: $red;
+    }
+
+    &:hover {
+        color: $blue;
+    }
+}
