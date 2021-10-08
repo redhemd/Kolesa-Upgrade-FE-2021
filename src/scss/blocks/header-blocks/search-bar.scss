@@ -1,6 +1,6 @@
 .search-bar {
     grid-area: search-bar;
-    background: $grey;
+    background: $white-darkest;
     border-radius: 8px;
 
     & button {
@@ -16,8 +16,8 @@
         position: relative;
         font-size: 20px;
         line-height: 28px;
-        color: $dark-grey;
-        background-color: $grey;
+        color: $gray;
+        background-color: $white-darkest;
         border: none;
         outline: none;
         cursor: pointer;

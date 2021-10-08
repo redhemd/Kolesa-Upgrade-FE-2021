@@ -20,7 +20,7 @@
         cursor: pointer;
 
         &:hover {
-            color: $blue;
+            color: $blue-primary;
         }
     }
 
@@ -34,7 +34,7 @@
             font-size: 24px;
             font-weight: 600;
             line-height: 36px;
-            color: $blue;
+            color: $blue-primary;
             margin-left: 20px;
             cursor: pointer;
         }
@@ -47,19 +47,19 @@
             cursor: pointer;
 
             &:hover {
-                color: $blue;
+                color: $blue-primary;
             }
         }
 
         &__sizes {
             font-size: 16px;
-            color: $dark-grey;
+            color: $gray;
             margin-left: 20px;
             margin-top: 10px;
             cursor: pointer;
 
             &:hover {
-                color: $blue;
+                color: $blue-primary;
             }
         }
 
@@ -67,7 +67,7 @@
             opacity: 0;
             margin: 15px 20px;
             padding: 16px;
-            background: $blue;
+            background: $blue-primary;
 
             @include box-shadow(0, 2px, 4px);
 

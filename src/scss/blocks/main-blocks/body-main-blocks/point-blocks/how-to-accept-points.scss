@@ -2,7 +2,7 @@
     border-radius: 16px;
     display: flex;
     align-items: center;
-    background: $light-yellow;
+    background: $payed-yellow;
     border: none;
     cursor: pointer;
     font-weight: 600;
@@ -16,6 +16,6 @@
     }
 
     &:hover {
-        color: $blue;
+        color: $blue-primary;
     }
 }

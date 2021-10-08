@@ -9,7 +9,7 @@
     &__name {
         font-weight: 600;
         font-size: 16px;
-        color: $blue;
+        color: $blue-primary;
         cursor: pointer;
         display: flex;
     }
@@ -21,7 +21,7 @@
         display: flex;
 
         &:hover {
-            color: $blue;
+            color: $blue-primary;
         }
     }
 }

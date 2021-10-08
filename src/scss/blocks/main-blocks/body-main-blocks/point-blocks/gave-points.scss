@@ -2,7 +2,7 @@
     border-radius: 16px;
     display: flex;
     align-items: center;
-    background: $light-silver url('/src/assets/present-icon.jpg') 50px center no-repeat;
+    background: $payed-blue url('/src/assets/present-icon.jpg') 50px center no-repeat;
     background-size: 45px 45px;
     border: none;
     cursor: pointer;
@@ -12,6 +12,6 @@
     padding-left: 115px;
 
     &:hover {
-        color: $blue;
+        color: $blue-primary;
     }
 }

@@ -8,12 +8,12 @@
         display: none;
 
         &:checked + label {
-            background-color: $light-blue;
+            background-color: $payed-green;
             color: $black;
             border: none;
 
             &:hover {
-                color: $blue;
+                color: $blue-primary;
             }
         }
     }
@@ -28,7 +28,7 @@
 
         &:hover {
             transition: 0.5s ease;
-            background-color: $light-grey;
+            background-color: transparentize($light-grey, 0.5);
         }
     }
 
@@ -42,7 +42,7 @@
 
         &:hover {
             transition: 0.5s ease;
-            background-color: $light-grey;
+            background-color: transparentize($light-grey, 0.5);
         }
     }
 
@@ -56,7 +56,7 @@
 
         &:hover {
             transition: 0.5s ease;
-            background-color: $light-grey;
+            background-color: transparentize($light-grey, 0.5);
         }
     }
 }

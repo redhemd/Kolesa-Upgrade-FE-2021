@@ -15,7 +15,7 @@
         --border-size: 2px;
 
         &:hover {
-            color: $blue;
+            color: $blue-primary;
             font-weight: bold;
 
             &::before {
@@ -29,7 +29,7 @@
             content: '';
             height: 23px;
             border-radius: 50px;
-            border: 1px solid $blue;
+            border: 1px solid $blue-primary;
             left: -10px;
             margin-right: -2px;
             opacity: 0;
@@ -43,7 +43,7 @@
                 content: '';
                 height: 23px;
                 border-radius: 50px;
-                border: 1px solid $blue;
+                border: 1px solid $blue-primary;
                 left: -10px;
                 margin-right: -2px;
             }

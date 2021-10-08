@@ -8,35 +8,12 @@
         cursor: pointer;
 
         &:hover {
-            color: $blue;
+            color: $blue-primary;
         }
     }
 
-    & .social-icons {
-        display: flex;
-        margin-left: 15px;
-        cursor: pointer;
+    &__social-icons {
         margin-top: 10px;
-
-        & img {
-            margin-left: 5px;
-            margin-right: 10px;
-        }
-
-        & .icon-inst {
-            width: 25px;
-        }
-
-        & .icon-youtube {
-            width: 25px;
-            height: 20px;
-            align-self: center;
-        }
-
-        & .icon-vk {
-            width: 25px;
-            height: 15px;
-            align-self: center;
-        }
+        margin-left: 15px;
     }
 }

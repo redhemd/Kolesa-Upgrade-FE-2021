@@ -1,5 +1,6 @@
 @import './vars.scss';
 @import './mixins.scss';
+@import './layout.scss';
 @import './blocks/header-blocks/header.scss';
 @import './blocks/header-blocks/logo.scss';
 @import './blocks/header-blocks/search-bar.scss';
@@ -16,16 +17,9 @@
 @import './blocks/main-blocks/body-main-blocks/card-product-blocks/product.scss';
 @import './blocks/footer-blocks/footer.scss';
 @import './blocks/footer-blocks/footer-info.scss';
+@import './blocks/footer-blocks/social-icons.scss';
 @import './blocks/footer-blocks/footer-suggestions.scss';
 @import './blocks/footer-blocks/footer-btn.scss';
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: 'Open Sans', sans-serif;
