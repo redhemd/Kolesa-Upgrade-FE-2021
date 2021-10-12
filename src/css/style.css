@@ -48,7 +48,7 @@ body {
     cursor: pointer;
 }
 
-.logo img {
+.header__logo img {
     width: 250px;
 }
 
@@ -144,7 +144,7 @@ body {
     margin-bottom: 28px;
 }
 
-.nav ul li a {
+.nav__item {
     text-decoration: none;
     font-size: 20px;
     color: #1c1819;
@@ -152,12 +152,12 @@ body {
     --border-size: 2px;
 }
 
-.nav ul li a:hover {
+.nav__item:hover {
     color: #2a81dd;
     font-weight: bold;
 }
 
-.nav ul li a::before {
+.nav__item::before {
     position: relative;
     content: '';
     height: 23px;
@@ -168,16 +168,16 @@ body {
     opacity: 0;
 }
 
-.nav ul li a:hover::before {
+.nav__item:hover::before {
     opacity: 1;
     transition: 0.5s ease;
 }
 
-.selected {
+.nav__item_active {
     font-weight: bolder;
 }
 
-.selected::before {
+.nav__item_active::before {
     position: relative;
     content: '';
     height: 23px;
@@ -219,7 +219,7 @@ body {
     line-height: 32px;
 }
 
-.accept-points-icon {
+.accept-points__icon {
     font-size: 36px;
     margin: 0 25px 0 40px;
 }
@@ -240,7 +240,7 @@ body {
     line-height: 32px;
 }
 
-.how-to-accept-points-icon {
+.how-to-accept-points__icon {
     font-size: 40px;
     margin: 0 20px 0 40px;
     color: red;

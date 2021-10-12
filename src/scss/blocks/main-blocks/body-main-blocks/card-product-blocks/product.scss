@@ -1,0 +1,92 @@
+.product {
+    text-align: center;
+
+    & img {
+        display: block;
+        grid-area: img;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    &__card-new {
+        position: absolute;
+        left: 23px;
+        bottom: 230px;
+        background: $green;
+        border-radius: 4px;
+        color: $white;
+        font-size: 12px;
+        padding: 1px 8px 1px 4px;
+        cursor: pointer;
+
+        &:hover {
+            color: $blue-primary;
+        }
+    }
+
+    &__card-info {
+        grid-area: card-info;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__points {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+            color: $blue-primary;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        &__descr {
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: $blue-primary;
+            }
+        }
+
+        &__sizes {
+            font-size: 16px;
+            color: $gray;
+            margin-left: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: $blue-primary;
+            }
+        }
+
+        &__btn {
+            opacity: 0;
+            margin: 15px 20px;
+            padding: 16px;
+            background: $blue-primary;
+
+            @include box-shadow(0, 2px, 4px);
+
+            border-radius: 8px;
+            align-self: stretch;
+            color: $white;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+        }
+    }
+
+    &:hover .product__card-info__points {
+        color: $red;
+        transition: 0.5s ease;
+    }
+
+    &:hover .product__card-info__btn {
+        opacity: 1;
+        transition: 0.5s ease;
+    }
+}

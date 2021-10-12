@@ -1,0 +1,21 @@
+.main {
+    grid-area: main;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        'nav main-menu main-menu main-menu'
+        'nav main-menu main-menu main-menu'
+        'nav main-menu main-menu main-menu'
+        'nav main-menu main-menu main-menu';
+
+    &__nav {
+        margin-right: 25px;
+
+        & ul li {
+            margin-bottom: 28px;
+        }
+    }
+}
