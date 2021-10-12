@@ -1,0 +1,29 @@
+.pictures-info-secondary {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    left: 82px;
+    top: 346px;
+    margin: 16px 0;
+
+    &__first img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    &__second img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid $blue-primary;
+        border-radius: 8px;
+        margin: 0 8px;
+        cursor: pointer;
+    }
+
+    &__third img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+}

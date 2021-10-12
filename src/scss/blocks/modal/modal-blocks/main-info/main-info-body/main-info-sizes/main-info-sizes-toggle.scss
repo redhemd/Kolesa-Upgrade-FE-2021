@@ -1,0 +1,62 @@
+.sizes-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    cursor: pointer;
+
+    & .size-toggle-text {
+        font-size: 14px;
+        line-height: 24px;
+        cursor: pointer;
+    }
+
+    & .blue-toggle-text {
+        color: $blue-primary;
+    }
+
+    & label.size {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        padding-left: 14px;
+        margin-right: 5px;
+    }
+
+    & input[type='radio'] {
+        display: none;
+    }
+
+    & input[type='radio']:checked + label {
+        background-color: $blue-lighter;
+        color: $black;
+
+        &:hover {
+            color: $blue-primary;
+        }
+    }
+
+    &__S {
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+
+    &__M {
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+
+    &__L {
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+}

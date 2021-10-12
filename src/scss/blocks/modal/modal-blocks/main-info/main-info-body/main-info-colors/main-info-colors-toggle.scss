@@ -1,0 +1,91 @@
+.colors-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 322px;
+    height: 40px;
+
+    & input[type='radio'] {
+        display: none;
+    }
+
+    & label.color {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8;
+        width: 110px;
+        height: 40px;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        margin-right: 5px;
+    }
+
+    & label.color::before {
+        content: '';
+        width: 23px;
+        height: 24px;
+        border-radius: 4px;
+        border: 1px solid $border-color;
+        margin-right: 5px;
+        margin-left: 7px;
+    }
+
+    & .colors-toggle-text {
+        font-size: 14px;
+        line-height: 24px;
+        cursor: pointer;
+    }
+
+    & .blue-toggle-text {
+        color: $blue-primary;
+    }
+
+    & input[type='radio']:checked + label {
+        background-color: $blue-lighter;
+        color: $black;
+
+        &:hover {
+            color: $blue-primary;
+        }
+    }
+
+    & .blue-tog[type='radio']:checked + label::before {
+        width: 23px;
+        height: 24px;
+        background-color: $blue-darkest;
+    }
+
+    & .beige-tog[type='radio']:checked + label::before {
+        width: 23px;
+        height: 24px;
+        background-color: $milk;
+    }
+
+    & .grey-tog[type='radio']:checked + label::before {
+        width: 23px;
+        height: 24px;
+        background-color: $gray-lighest;
+    }
+
+    &__blue {
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+
+    &__beige {
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+
+    &__grey {
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+}
