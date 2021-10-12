@@ -82,149 +82,34 @@ const makeProductCard = (img, isNew, price, title, id) => `
         </div>
 `;
 
-// const makeModal = (img, title, price) =>
-// `
-// <div class="modal-bg">
-// <div class="modal modal-bg__modal">
-//     <div class="pictures-info modal__pictures-info">
-//         <div class="pictures-info-primary pictures-info__pictures-info-primary">
-//             <img
-//                 src=${img}
-//                 alt="Main Picture Of Jumper"
-//             />
-//         </div>
-
-//         <div class="pictures-info-secondary pictures-info__pictures-info-secondary">
-//             <div class="pictures-info-secondary__first">
-//             <img
-//                 src="./src/assets/secondary-pic-01.jpg"
-//                 alt="Secondary Photo Of Jumper"
-//             />
-//         </div>
-//             <div class="pictures-info-secondary__second">
-//                     <img
-//                         src="./src/assets/secondary-pic-01.jpg"
-//                         alt="Secondary Photo Of Jumper"
-//                     />
-//                 </div >
-//                 <div class="pictures-info-secondary__third">
-//                     <img
-//                         src="./src/assets/secondary-pic-01.jpg"
-//                         alt="Secondary Photo Of Jumper"
-//                     />
-//                 </div>
-//             </div>
-//         </div>
-
-//         <div class="main-info">
-//             <div class="main-info-header">
-//                 <span class="main-info-header-text">
-//                     ${title}
-//                 </span>
-
-//                 <span class="main-info-price-text">${price} баллов</span>
-
-//                 <button type="button" class="modal-btn">
-//                     <span class="btn-text">Заказать</span>
-//                 </button>
-//             </div>
-
-//             <div class="main-info-body">
-//                 <div class="colors-block">
-//                     <p class="colors-block-text">Цвета:</p>
-
-//                     <div class="colors-toggle">
-//                         <input class="blue-tog" type="radio" name="color" id="blue" checked>
-//                         <label class="color colors-toggle-text blue-toggle-text colors-toggle__blue" for="blue">Синий</label>
-
-//                         <input class="beige-tog" type="radio" name="color" id="beige">
-//                         <label class="color colors-toggle-text blue-toggle-text colors-toggle__beige" for="beige">Бежевый</label>
-
-//                         <input class="grey-tog" type="radio" name="color" id="grey">
-//                         <label class="color colors-toggle-text blue-toggle-text colors-toggle__grey" for="grey">Серый</label>
-//                         </div>
-//                     </div>
-
-//                     <div class="sizes-block">
-//                         <p class="sizes-block-text">Размер:</p>
-
-//                         <div class="sizes-toggle">
-//                             <input type="radio" name="size" id="s" checked>
-//                             <label class="size size-toggle-text blue-toggle-text sizes-toggle__S" for="s">S</label>
-
-//                             <input type="radio" name="size" id="m" >
-//                             <label class="size size-toggle-text blue-toggle-text sizes-toggle__M" for="m">M</label>
-
-//                             <input type="radio" name="size" id="l" >
-//                             <label class="size size-toggle-text blue-toggle-text sizes-toggle__L" for="l">L</label>
-//                         </div>
-//                     </div>
-
-//                     <div class="footer-block">
-//                         <div class="footer-block-details">
-//                             <span class="footer-block-details-first">Детали:</span>
-//                             <span class="footer-block-details-second">
-//                                 Брендированная толстовка от Qazaq Republic.
-//                                 Материал: Хлопок 80%, Вискоза 20%
-//                             </span>
-//                         </div>
-
-//                         <div class="footer-block-additional-info">
-//                             <span class="footer-block-add-first">
-//                                 Как выбрать размер:
-//                             </span>
-//                             <span class="footer-block-add-second">Написать дяде Рику для уточнения.</span>
-//                         </div>
-
-//                     </div>
-//                 </div>
-//             </div>
-
-//             <div class="balance-info">
-//                 <div class="balance-text">
-//                     <span class="your-balance">Твой баланс:</span>
-//                     <p class="your-balance-points">3 945 баллов</p>
-//                 </div>
-//                 <img
-//                     class="balance-icon"
-//                     src="./src/assets/cart-pic.jpg"
-//                     alt="Balance Icon Picture"
-//                 />
-//             </div>
-
-//             <input type="image" src="./src/assets/modal-close-pic.jpg" class="modal-close">
-//         </div>
-//     </div>
-// `;
-
 const makeModal = (img, title, price) => `
 <div class="modal-bg">
     <div class="modal modal-bg__modal">
         <div class="pictures-info modal__pictures-info">
-            <div class="pictures-info-primary pictures-info__pictures-info-primary">
-                <img src=${img} alt="Main Picture Of Jumper" />
-            </div>
-            <div class="pictures-info-secondary pictures-info__pictures-info-secondary">
-                <div class="pictures-info-secondary__first">
-                    <img src="./src/assets/secondary-pic-01.jpg" alt="Secondary Photo Of Jumper" />
-                </div>
-                <div class="pictures-info-secondary__second">
-                    <img src="./src/assets/secondary-pic-01.jpg" alt="Secondary Photo Of Jumper" />
-                </div >
-                <div class="pictures-info-secondary__third">
-                    <img src="./src/assets/secondary-pic-01.jpg" alt="Secondary Photo Of Jumper" />
-                </div>
-            </div>
+        <div class="pictures-info-primary pictures-info__pictures-info-primary">
+        <img src=${img} alt="Main Picture Of Jumper" />
+        </div>
+        <div class="pictures-info-secondary pictures-info__pictures-info-secondary">
+        <div class="pictures-info-secondary__first">
+        <img src="./src/assets/secondary-pic-01.jpg" alt="Secondary Photo Of Jumper" />
+        </div>
+        <div class="pictures-info-secondary__second">
+        <img src="./src/assets/secondary-pic-01.jpg" alt="Secondary Photo Of Jumper" />
+        </div >
+        <div class="pictures-info-secondary__third">
+        <img src="./src/assets/secondary-pic-01.jpg" alt="Secondary Photo Of Jumper" />
+        </div>
+        </div>
         </div>
 
         <div class="main-info">
-            <div class="main-info-header">
-                <span class="main-info-header-text">${title}</span>
-                <span class="main-info-price-text">${price} баллов</span>
-                <button type="button" class="modal-btn">
-                    <span class="btn-text">Заказать</span>
-                </button>
-            </div>
+        <div class="main-info-header">
+        <span class="main-info-header-text">${title}</span>
+        <span class="main-info-price-text">${price} баллов</span>
+        <button type="button" class="modal-btn">
+        <span class="btn-text">Заказать</span>
+        </button>
+        </div>
 
         <div class="main-info-body">
         <div class="colors-block">
@@ -267,11 +152,11 @@ const makeModal = (img, title, price) => `
         </div>
 
         <div class="balance-info">
-            <div class="balance-text">
-                <span class="your-balance">Твой баланс:</span>
-                <p class="your-balance-points">3 945 баллов</p>
-            </div>
-            <img class="balance-icon" src="./src/assets/cart-pic.jpg" alt="Balance Icon Picture"/>
+        <div class="balance-text">
+        <span class="your-balance">Твой баланс:</span>
+        <p class="your-balance-points">3 945 баллов</p>
+        </div>
+        <img class="balance-icon" src="./src/assets/cart-pic.jpg" alt="Balance Icon Picture"/>
         </div>
         <input type="image" src="./src/assets/modal-close-pic.jpg" class="modal-close">
     </div>
@@ -306,17 +191,6 @@ const openModal = () => {
 
                 return null;
             });
-            // arr.find((card)=>{
-            // if (card.id === cardToggle) {
-            //     const {img, title, price} = card
-            //     const modal = makeModal(img, title, price)
-            //     return document.querySelector('.modal-main').innerHTML += modal
-            // }
-            // const {img, title, price} = card
-            // const modal = makeModal(img, title, price)
-            // card.id === cardToggle
-            // const result = card.find
-            // })
             closeModal();
         });
     });
