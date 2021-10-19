@@ -1,0 +1,10 @@
+.your-balance {
+    color: $gray;
+    font-size: 14px;
+    line-height: 24px;
+    margin-left: 12px;
+
+    &:hover {
+        color: $blue-primary;
+    }
+}

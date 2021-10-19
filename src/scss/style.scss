@@ -20,6 +20,32 @@
 @import './blocks/footer-blocks/social-icons.scss';
 @import './blocks/footer-blocks/footer-suggestions.scss';
 @import './blocks/footer-blocks/footer-btn.scss';
+@import './blocks/modal/modal-bg.scss';
+@import './blocks/modal/modal.scss';
+@import './blocks/modal/modal-blocks/pictures-info/pictures-info.scss';
+@import './blocks/modal/modal-blocks/pictures-info/pictures-info-primary.scss';
+@import './blocks/modal/modal-blocks/pictures-info/pictures-info-secondary.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-header/main-info-header.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-header/main-info-header-text.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-header/main-info-price-text.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-header/main-info-btn.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-colors/main-info-colors-text.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-colors/main-info-colors-toggle.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-sizes/main-info-sizes-text.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-sizes/main-info-sizes-toggle.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-footer/main-info-footer.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-footer/main-info-footer-details-main/main-info-footer-details.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-footer/main-info-footer-details-main/main-info-footer-details-first.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-footer/main-info-footer-details-main/main-info-footer-details-second.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-footer/main-info-footer-details-additional/main-info-footer-details-additional.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-footer/main-info-footer-details-additional/main-info-footer-details-additional-first.scss';
+@import './blocks/modal/modal-blocks/main-info/main-info-body/main-info-footer/main-info-footer-details-additional/main-info-footer-details-additional-second.scss';
+@import './blocks/modal/modal-blocks/balance-info/balance-info.scss';
+@import './blocks/modal/modal-blocks/balance-info/balance-info-icon.scss';
+@import './blocks/modal/modal-blocks/balance-info/balance-info-text/balance-info-text-yours.scss';
+@import './blocks/modal/modal-blocks/balance-info/balance-info-text/balance-info-points.scss';
+@import './blocks/modal/modal-blocks/modal-close/modal-close.scss';
 
 body {
     font-family: 'Open Sans', sans-serif;
