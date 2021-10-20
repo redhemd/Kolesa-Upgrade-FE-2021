@@ -2,7 +2,10 @@
   "name": "vite-project",
   "version": "0.0.0",
   "license": "MIT",
-  "repository": "https://github.com/Manchenko/Kolesa-Upgrade-FE-2021.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manchenko/Kolesa-Upgrade-FE-2021.git"
+  },
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
@@ -36,5 +39,15 @@
     ".editorconfig": [
       "eclint fix"
     ]
+  },
+  "description": "Для начала работы необходимо убедится, что на компьютере установлена актуальная версия NodeJS. В дальнейшем мы будем исходить из того, что у вас установлена версия LTS (на данный момент — v14).",
+  "bugs": {
+    "url": "https://github.com/Manchenko/Kolesa-Upgrade-FE-2021/issues"
+  },
+  "homepage": "https://github.com/Manchenko/Kolesa-Upgrade-FE-2021#readme",
+  "main": "stylelint.config.js",
+  "author": "",
+  "dependencies": {
+    "node-modules": "^1.0.1"
   }
 }
