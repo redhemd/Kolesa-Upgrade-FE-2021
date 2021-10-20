@@ -1,0 +1,10 @@
+.your-balance-points {
+    font-size: 14px;
+    line-height: 24px;
+    margin-left: 12px;
+    margin-top: 3px;
+
+    &:hover {
+        color: $blue-primary;
+    }
+}

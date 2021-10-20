@@ -1,0 +1,18 @@
+.modal-btn {
+    width: 134px;
+    height: 36px;
+    background: $blue-primary;
+    cursor: pointer;
+
+    @include box-shadow(0, 2px, 4px, $border-color);
+
+    border-radius: 8px;
+    border: none;
+    flex: none;
+    margin: 8px 0;
+
+    & span {
+        font-size: 14px;
+        color: $white;
+    }
+}
