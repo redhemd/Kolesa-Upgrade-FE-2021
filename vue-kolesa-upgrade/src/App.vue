@@ -7,265 +7,87 @@
 <img src="./assets/kolesa-logo.svg" alt="Kolesa Logo">
 </div>
 
-<form class="search-bar header__search-bar">
-<button>
-<input type="text" autocomplete="off" placeholder="Поиск">
-</button>
-</form>
+<app-search
+  :search="search"
+  @setFromSearch="searchInApp"
+></app-search>
 
-<button class="user header__user">
-<span>
-<span class="user__name">Мортиджан</span>
-<span class="user__points">300 баллов</span>
-</span>
-</button>
+<app-user
+  :orderPrice="orderPrice"
+  @getScoreFromUser="getScore"
+></app-user>
 </div>
 
 <div class="main container__main">
-<div class="nav main__nav">
-<ul>
-<li>
-<a class="nav__item" href="#">Оргсхема</a>
-</li>
-<li>
-<a class="nav__item" href="#">Kolesa Team</a>
-</li>
-<li>
-<a class="nav__item nav__item_active" href="#">
-<span >Kolesa Shop</span>
-</a>
-</li>
-<li>
-<a class="nav__item" href="#">Картина компании</a>
-</li>
-<li>
-<a class="nav__item" href="#">Новости</a>
-</li>
-<li>
-<a class="nav__item" href="#">Education</a>
-</li>
-<li>
-<a class="nav__item" href="#">Guidelines</a>
-</li>
-<li>
-<a class="nav__item" href="#">Библиотека</a>
-</li>
-<li>
-<a class="nav__item" href="#">FAQ</a>
-</li>
-</ul>
-</div>
+<app-navbar></app-navbar>
 
 <div class="body-main-block">
-<div class="point-blocks">
-<button class="accept-points">
-<span class="accept-points__icon">➕</span>
-<span>Получить баллы</span>
-</button>
+<app-point-blocks></app-point-blocks>
 
-<button class="how-to-accept-points">
-<span class="how-to-accept-points__icon">❓</span>
-<span>Как получить баллы</span>
-</button>
+<app-filter
+  @showAllBtn="showAllBtn"
+  @showClothesBtn="showClothesBtn"
+  @showAccessesBtn="showAccessesBtn"
+></app-filter>
 
-<button class="gave-points">Подарить баллы</button>
-</div>
+<app-loader
+  v-if="!this.allCardsForLoader"
+  :isLoading="isLoadingSpinner"
+></app-loader>
 
-<div class="good-types body-main-block__good-types">
-<input type="radio" name="type" id="all-goods"  value="0" v-model="picked" checked>
-<label data-key="all-goods" class="good-types__all js__good-types"
-for="all-goods" @click="clear">Все товары</label>
-
-<input type="radio" name="type" id="clothes" value="1" v-model="picked">
-<label data-key="clothes" class="good-types__clothes js__good-types"
-for="clothes" @click="clear">Одежда</label>
-
-<input type="radio" name="type" id="accesses" value="2" v-model="picked">
-<label data-key="accesses" class="good-types__accesses js__good-types"
-for="accesses" @click="clear">Аксессуары</label>
-</div>
-
-<div class="card-products js__cards">
-  <div class="sortedAllCards" v-for="(card, index) in sortedAllCards" :key="index">
-      <div :data-id="card.id" class="product card-products__product">
-        <img :src="card.img" alt="">
-        <span class="product__card-new" v-if="card.isNew">NEW</span>
-        <div class="product__card-info">
-          <span class="product__card-info__points">{{ card.price }} баллов</span>
-          <span class="product__card-info__descr">{{ card.title }}</span>
-          <span class="product__card-info__sizes">Размеры S/M/L</span>
-          <button class="product__card-info__btn" @click="openModal(card)">Заказать</button>
-        </div>
-      </div>
-  </div>
-</div>
-
-<div class="card-products" v-if="picked === '0'">
-  <div class="sortedAllCards" v-for="(card, index) in sortedAllCards" :key="index">
-      <div :data-id="card.id" class="product card-products__product">
-        <img :src="card.img" alt="">
-        <span class="product__card-new" v-if="card.isNew">NEW</span>
-        <div class="product__card-info">
-          <span class="product__card-info__points">{{ card.price }} баллов</span>
-          <span class="product__card-info__descr">{{ card.title }}</span>
-          <span class="product__card-info__sizes">Размеры S/M/L</span>
-          <button class="product__card-info__btn" @click="openModal(card)">Заказать</button>
-        </div>
-      </div>
-  </div>
-</div>
-
-<div class="card-products" v-if="picked === '1'">
-  <div class="sortedAllCards" v-for="(card, index) in clothes" :key="index">
-      <div :data-id="card.id" class="product card-products__product">
-        <img :src="card.img" alt="">
-        <span class="product__card-new" v-if="card.isNew">NEW</span>
-        <div class="product__card-info">
-          <span class="product__card-info__points">{{ card.price }} баллов</span>
-          <span class="product__card-info__descr">{{ card.title }}</span>
-          <span class="product__card-info__sizes">Размеры S/M/L</span>
-          <button class="product__card-info__btn" @click="openModal(card)">Заказать</button>
-        </div>
-      </div>
-  </div>
-</div>
-
-<div class="card-products" v-if="picked === '2'">
-  <div class="sortedAllCards" v-for="(card, index) in accesses" :key="index">
-      <div :data-id="card.id" class="product card-products__product">
-        <img :src="card.img" alt="">
-        <span class="product__card-new" v-if="card.isNew">NEW</span>
-        <div class="product__card-info">
-          <span class="product__card-info__points">{{ card.price }} баллов</span>
-          <span class="product__card-info__descr">{{ card.title }}</span>
-          <span class="product__card-info__sizes">Размеры S/M/L</span>
-          <button class="product__card-info__btn" @click="openModal(card)">Заказать</button>
-        </div>
-      </div>
-  </div>
-</div>
-
-<div class="modal-main">
-<div class="modal-bg">
-<div class="modal modal-bg__modal">
-<div class="pictures-info modal__pictures-info">
-<div class="pictures-info-primary pictures-info__pictures-info-primary">
-<img src='./assets/t-shirt-0.jpg' alt="Main Picture Of Jumper" />
-</div>
-<div class="pictures-info-secondary pictures-info__pictures-info-secondary">
-<div class="pictures-info-secondary__first">
-<img src='./assets/t-shirt-0.jpg' alt="Secondary Photo Of Jumper" />
-</div>
-<div class="pictures-info-secondary__second">
-<img src='./assets/t-shirt-0.jpg' alt="Secondary Photo Of Jumper" />
-</div >
-<div class="pictures-info-secondary__third">
-<img src='./assets/t-shirt-0.jpg' alt="Secondary Photo Of Jumper" />
-</div>
+<app-card
+  v-else
+  :clothes="clothesFromBE"
+  :accesses="accessesFromBE"
+  :selectedTab="selectedTab"
+  @orderFromCard="orderToUser"
+  :search="search"
+  @cardInited="showLoader"
+></app-card>
 </div>
 </div>
 
-<div class="main-info">
-<div class="main-info-header">
-<span class="main-info-header-text">Футболка "A Programmer's Life"</span>
-<span class="main-info-price-text">150 баллов</span>
-<button type="button" class="modal-btn">
-<span class="btn-text">Заказать</span>
-</button>
-</div>
-
-<div class="main-info-body">
-<div class="colors-block">
-<p class="colors-block-text">Цвета:</p>
-<div class="colors-toggle">
-<input class="blue-tog" type="radio" name="color" id="blue" checked>
-<label class="color colors-toggle-text blue-toggle-text colors-toggle__blue" for="blue">
-Синий
-</label>
-<input class="beige-tog" type="radio" name="color" id="beige">
-<label class="color colors-toggle-text blue-toggle-text colors-toggle__beige" for="beige">
-Бежевый
-</label>
-<input class="grey-tog" type="radio" name="color" id="grey">
-<label class="color colors-toggle-text blue-toggle-text colors-toggle__grey" for="grey">
-Серый
-</label>
-</div>
-</div>
-
-<div class="sizes-block">
-<p class="sizes-block-text">Размер:</p>
-<div class="sizes-toggle">
-<input type="radio" name="size" id="s" checked>
-<label class="size size-toggle-text blue-toggle-text sizes-toggle__S" for="s">S</label>
-<input type="radio" name="size" id="m" >
-<label class="size size-toggle-text blue-toggle-text sizes-toggle__M" for="m">M</label>
-<input type="radio" name="size" id="l" >
-<label class="size size-toggle-text blue-toggle-text sizes-toggle__L" for="l">L</label>
-</div>
-</div>
-
-<div class="footer-block">
-<div class="footer-block-details">
-<span class="footer-block-details-first">Детали:</span>
-<span class="footer-block-details-second">
-Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
-</span>
-</div>
-<div class="footer-block-additional-info">
-<span class="footer-block-add-first">Как выбрать размер:</span>
-<span class="footer-block-add-second">Написать дяде Рику для уточнения.</span>
-</div>
-</div>
-</div>
-</div>
-
-<div class="balance-info">
-<div class="balance-text">
-<span class="your-balance">Твой баланс:</span>
-<p class="your-balance-points">3 945 баллов</p>
-</div>
-<img class="balance-icon" src='./assets/cart-pic.jpg' alt="Balance Icon Picture"/>
-</div>
-<input type="image" src="./assets/modal-close-pic.jpg" class="modal-close" @click="closeModal">
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="footer container__footer">
-<div class="footer-info footer__footer-info">
-
-<span>© Kolesa Group</span>
-<div class="social-icons footer-info__social-icons">
-<img class="icon-inst" src="./assets/social-instagram-icon.svg" alt="Social Instagram">
-<img class="icon-youtube" src="./assets/social-youtube-icon.svg" alt="Social Youtube">
-<img class="icon-vk" src="./assets/social-vk-icon.svg" alt="Social VK">
-</div>
-
-</div>
-
-<div class="suggestions footer__suggestions">
-<span class="suggestions__text">Есть идеи что улучшить?</span>
-<span>Не знаешь, с кем решить проблему?</span>
-</div>
-
-<button class="footer-btn footer__footer-btn">Написать</button>
-</div>
+<app-footer></app-footer>
 </div>
 </body>
 </div>
 </template>
 
 <script>
+import axios from './axios';
+
+import AppLoader from './components/AppLoader.vue';
+import AppCard from './components/AppCard.vue';
+import AppFilter from './components/AppFilter.vue';
+import AppFooter from './components/AppFooter.vue';
+import AppNavbar from './components/AppNavbar.vue';
+import AppPointBlocks from './components/AppPointBlocks.vue';
+import AppSearch from './components/AppSearch.vue';
+import AppUser from './components/AppUser.vue';
 
 export default {
   name: 'App',
+  mounted() {
+    axios.get('templates/-_RLsEGjof6i/data')
+      .then((response) => {
+        this.clothesFromBE = response.data;
+      });
+    axios.get('templates/q3OPxRyEcPvP/data')
+      .then((response) => {
+        this.accessesFromBE = response.data;
+      });
+  },
   data() {
     return {
-      picked: 0,
+      isLoadingSpinner: false,
+      allCardsForLoader: [],
+      isShowModal: false,
       selectedTab: 0,
+      orderPrice: 0,
+      search: '',
+      clothesFromBE: [],
+      accessesFromBE: [],
+      userFromBE: {},
       /* eslint-disable global-require */
       clothes: [
         {
@@ -299,7 +121,7 @@ export default {
           id: 3,
           img: require('./assets/t-shirt-3.jpg'),
           isNew: false,
-          price: 250,
+          price: 350,
           title: 'Футболка "Programmer Evolution"',
           cartImg: require('./assets/cart-pic.jpg'),
           closeImg: require('./assets/modal-close-pic.jpg'),
@@ -308,7 +130,7 @@ export default {
           id: 4,
           img: require('./assets/t-shirt-4.jpg'),
           isNew: false,
-          price: 300,
+          price: 500,
           title: 'Футболка "Мой код работает!"',
           cartImg: require('./assets/cart-pic.jpg'),
           closeImg: require('./assets/modal-close-pic.jpg'),
@@ -346,7 +168,7 @@ export default {
           id: 8,
           img: require('./assets/access-3.jpg'),
           isNew: false,
-          price: 35,
+          price: 335,
           title: 'Кружка "Лучший программист"',
           cartImg: require('./assets/cart-pic.jpg'),
           closeImg: require('./assets/modal-close-pic.jpg'),
@@ -355,25 +177,38 @@ export default {
       /* eslint-enable global-require */
     };
   },
-  computed: {
-    sortedAllCards() {
-      const arr = this.clothes.concat(this.accesses);
-      arr.sort((a, b) => b.isNew - a.isNew);
-      return arr;
+  methods: {
+    showAllBtn() {
+      this.selectedTab = 0;
+    },
+    showClothesBtn() {
+      this.selectedTab = 1;
+    },
+    showAccessesBtn() {
+      this.selectedTab = 2;
+    },
+    getScore(scoreFromUserFromBE) {
+      this.orderPrice = scoreFromUserFromBE;
+    },
+    orderToUser(cost) {
+      this.orderPrice -= cost;
+    },
+    searchInApp(searchStr) {
+      this.search = searchStr;
+    },
+    showLoader(allCardsFromBE) {
+      this.allCardsForLoader = allCardsFromBE;
     },
   },
-  methods: {
-    closeModal() {
-      const modalMain = document.querySelector('.modal-main');
-      modalMain.style.display = 'none';
-    },
-    openModal() {
-      const modalMain = document.querySelector('.modal-main');
-      modalMain.style.display = 'block';
-    },
-    clear() {
-      document.querySelector('.js__cards').innerHTML = '';
-    },
+  components: {
+    AppSearch,
+    AppUser,
+    AppNavbar,
+    AppPointBlocks,
+    AppFilter,
+    AppCard,
+    AppFooter,
+    AppLoader,
   },
 };
 </script>
