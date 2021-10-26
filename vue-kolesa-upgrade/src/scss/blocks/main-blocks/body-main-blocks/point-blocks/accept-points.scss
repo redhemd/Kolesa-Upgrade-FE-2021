@@ -1,0 +1,20 @@
+.accept-points {
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background: $payed-green;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+
+    &__icon {
+        font-size: 36px;
+        margin: 0 25px 0 40px;
+    }
+
+    &:hover {
+        color: $blue-primary;
+    }
+}

@@ -1,0 +1,62 @@
+.good-types {
+    grid-area: good-types;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4px;
+
+    & input[type='radio'] {
+        display: none;
+
+        &:checked + label {
+            background-color: $payed-green;
+            color: $black;
+            border: none;
+
+            &:hover {
+                color: $blue-primary;
+            }
+        }
+    }
+
+    &__all {
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $border-color;
+        cursor: pointer;
+
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+
+    &__clothes {
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $border-color;
+        cursor: pointer;
+
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+
+    &__accesses {
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $border-color;
+        cursor: pointer;
+
+        &:hover {
+            transition: 0.5s ease;
+            background-color: transparentize($light-grey, 0.5);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.gave-points {
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background: $payed-blue url('assets/present-icon.jpg') 50px center no-repeat;
+    background-size: 45px 45px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    padding-left: 115px;
+
+    &:hover {
+        color: $blue-primary;
+    }
+}

@@ -1,0 +1,27 @@
+.user {
+    grid-area: user;
+    display: flex;
+    justify-content: flex-end;
+    background: url('assets/user-logo.jpg') center no-repeat;
+    background-size: 45px 45px;
+    border: none;
+
+    &__name {
+        font-weight: 600;
+        font-size: 16px;
+        color: $blue-primary;
+        cursor: pointer;
+        display: flex;
+    }
+
+    &__points {
+        cursor: pointer;
+        font-size: 14px;
+        color: $black;
+        display: flex;
+
+        &:hover {
+            color: $blue-primary;
+        }
+    }
+}

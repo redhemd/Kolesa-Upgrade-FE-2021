@@ -1,0 +1,19 @@
+.footer-info {
+    grid-area: footer-info;
+    color: $white;
+
+    & span {
+        font-size: 16px;
+        margin-left: 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: $blue-primary;
+        }
+    }
+
+    &__social-icons {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+}
