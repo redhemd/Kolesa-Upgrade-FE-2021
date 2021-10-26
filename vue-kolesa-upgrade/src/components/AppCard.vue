@@ -21,9 +21,9 @@
       :card="cardToModal"
       @orderFromModal="orderInCard"
     ></app-modal>
-    </div>
+  </div>
 
-    <div class="card-products js__cards" v-else-if="this.selectedTab === 1">
+  <div class="card-products js__cards" v-else-if="this.selectedTab === 1">
     <div class="sortedAllCards" v-for="(card, index) in searchClothesFilter" :key="index">
         <div :data-id="card.id" class="product card-products__product">
           <img :src="card.mainImage" alt="">
@@ -44,9 +44,9 @@
       :card="cardToModal"
       @orderFromModal="orderInCard"
       ></app-modal>
-    </div>
+  </div>
 
-    <div class="card-products js__cards" v-else-if="this.selectedTab === 2">
+  <div class="card-products js__cards" v-else-if="this.selectedTab === 2">
     <div class="sortedAllCards" v-for="(card, index) in searchAccessesFilter" :key="index">
         <div :data-id="card.id" class="product card-products__product">
           <img :src="card.mainImage" alt="">
@@ -68,9 +68,14 @@
       @orderFromModal="orderInCard"
       ></app-modal>
   </div>
+
+  <div v-else>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </div>
 </template>
 
 <script>
+// import AppLoader from './AppLoader.vue';
 import AppModal from './AppModal.vue';
 
 export default {
@@ -81,17 +86,17 @@ export default {
     selectedTab: Number,
     search: String,
   },
-  mounted() {
-    this.init = this.searchAllCardsFilter;
-    this.$emit('cardInited', this.init);
-  },
+  // mounted() {
+  //   this.init = this.searchAllCardsFilter;
+  //   this.$emit('cardInited', this.init);
+  // },
   data() {
     return {
       isShowModal: false,
       cardToModal: {},
       testCard: {},
       sizesOfCards: [],
-      init: [],
+      // init: [],
     };
   },
   computed: {
@@ -127,6 +132,7 @@ export default {
   },
   components: {
     AppModal,
+    // AppLoader,
   },
 };
 </script>

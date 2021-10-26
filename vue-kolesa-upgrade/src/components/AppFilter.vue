@@ -1,19 +1,45 @@
 <template>
-  <div class="good-types body-main-block__good-types">
-    <input type="radio" name="type" id="all-goods"
-    value="0" v-model="picked" @click="showAll" checked >
-    <label data-key="all-goods" class="good-types__all js__good-types"
-    for="all-goods" >Все товары</label>
+  <div class="good-types body-main-block__good-types" >
+    <input
+      type="radio"
+      name="type"
+      id="all-goods"
+      value="0"
+      v-model="selectedType"
+      @click="showAll"
+      checked
+    >
+    <label
+      data-key="all-goods"
+      class="good-types__all js__good-types"
+      for="all-goods"
+    >Все товары</label>
 
-    <input type="radio" name="type" id="clothes"
-    value="1" v-model="picked" @click="showClothes">
-    <label data-key="clothes" class="good-types__clothes js__good-types"
-    for="clothes" >Одежда</label>
+    <input
+      type="radio"
+      name="type"
+      id="clothes"
+      value="1"
+      v-model="selectedType"
+      @click="showClothes">
+    <label
+      data-key="clothes"
+      class="good-types__clothes js__good-types"
+      for="clothes"
+    >Одежда</label>
 
-    <input type="radio" name="type" id="accesses"
-    value="2" v-model="picked" @click="showAccesses">
-    <label data-key="accesses" class="good-types__accesses js__good-types"
-    for="accesses">Аксессуары</label>
+    <input
+      type="radio"
+      name="type"
+      id="accesses"
+      value="2"
+      v-model="selectedType"
+      @click="showAccesses">
+    <label
+      data-key="accesses"
+      class="good-types__accesses js__good-types"
+      for="accesses"
+    >Аксессуары</label>
   </div>
 </template>
 
@@ -22,9 +48,33 @@ export default {
   name: 'AppFilter',
   data() {
     return {
-      picked: 0,
+      selectedType: 0,
+      types: [
+        {
+          name: 'All goods',
+          value: 'all',
+        },
+        {
+          name: 'Clothes',
+          value: 'clothes',
+        },
+        {
+          name: 'Accessories',
+          value: 'accesses',
+        },
+      ],
     };
   },
+  // computed() {
+  //   filteredProducts() {
+  //     if (this.selectedType === 'all') return this.allProducts;
+
+  //     return this.allProducts.filter((product) => product.category === this.selectedType);
+  //   },
+  //   sortedProducts() {
+  //     return this.filteredProducts.sort(())
+  //   },
+  // },
   methods: {
     showAll() {
       this.$emit('showAllBtn');

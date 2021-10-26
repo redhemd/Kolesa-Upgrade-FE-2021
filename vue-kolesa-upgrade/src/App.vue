@@ -30,13 +30,12 @@
   @showAccessesBtn="showAccessesBtn"
 ></app-filter>
 
-<app-loader
+<!-- <app-loader
   v-if="!this.allCardsForLoader"
   :isLoading="isLoadingSpinner"
-></app-loader>
+></app-loader> -->
 
 <app-card
-  v-else
   :clothes="clothesFromBE"
   :accesses="accessesFromBE"
   :selectedTab="selectedTab"
@@ -56,7 +55,7 @@
 <script>
 import axios from './axios';
 
-import AppLoader from './components/AppLoader.vue';
+// import AppLoader from './components/AppLoader.vue';
 import AppCard from './components/AppCard.vue';
 import AppFilter from './components/AppFilter.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -88,94 +87,12 @@ export default {
       clothesFromBE: [],
       accessesFromBE: [],
       userFromBE: {},
-      /* eslint-disable global-require */
-      clothes: [
-        {
-          id: 0,
-          img: require('./assets/t-shirt-0.jpg'),
-          isNew: true,
-          price: 100,
-          title: 'Футболка "A Programmer\'s Life"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-        {
-          id: 1,
-          img: require('./assets/t-shirt-1.jpg'),
-          isNew: true,
-          price: 150,
-          title: 'Свитшот "Программист"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-        {
-          id: 2,
-          img: require('./assets/t-shirt-2.jpg'),
-          isNew: false,
-          price: 200,
-          title: 'Футболка "Programmer"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-        {
-          id: 3,
-          img: require('./assets/t-shirt-3.jpg'),
-          isNew: false,
-          price: 350,
-          title: 'Футболка "Programmer Evolution"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-        {
-          id: 4,
-          img: require('./assets/t-shirt-4.jpg'),
-          isNew: false,
-          price: 500,
-          title: 'Футболка "Мой код работает!"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-      ],
-      accesses: [
-        {
-          id: 5,
-          img: require('./assets/access-0.jpg'),
-          isNew: true,
-          price: 20,
-          title: 'Кружка "Programmer Evolution"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-        {
-          id: 6,
-          img: require('./assets/access-1.jpg'),
-          isNew: true,
-          price: 25,
-          title: 'Кружка "Я программист"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-        {
-          id: 7,
-          img: require('./assets/access-2.jpg'),
-          isNew: false,
-          price: 30,
-          title: 'Кружка "HTML+CSS"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-        {
-          id: 8,
-          img: require('./assets/access-3.jpg'),
-          isNew: false,
-          price: 335,
-          title: 'Кружка "Лучший программист"',
-          cartImg: require('./assets/cart-pic.jpg'),
-          closeImg: require('./assets/modal-close-pic.jpg'),
-        },
-      ],
-      /* eslint-enable global-require */
     };
+  },
+  computed: {
+    allProducts() {
+      return { ...this.clothesFromBE, ...this.accessesFromBE };
+    },
   },
   methods: {
     showAllBtn() {
@@ -208,7 +125,7 @@ export default {
     AppFilter,
     AppCard,
     AppFooter,
-    AppLoader,
+    // AppLoader,
   },
 };
 </script>

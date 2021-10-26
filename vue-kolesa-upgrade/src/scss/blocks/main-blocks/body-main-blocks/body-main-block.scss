@@ -10,12 +10,19 @@
         'good-types . .'
         'card-products card-products card-products';
 
+    &__point-blocks {
+      min-height: 67px;
+      max-height: 67px;
+    }
+
     &__good-types {
         & label {
             font-size: 16px;
             line-height: 20px;
             font-weight: 500;
             color: $blue-primary;
+            min-height: 40px;
+            max-height: 40px;
         }
     }
 }
