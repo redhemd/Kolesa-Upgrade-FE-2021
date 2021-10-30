@@ -3,9 +3,9 @@
   <div class="footer-info footer__footer-info">
     <span>© Kolesa Group</span>
     <div class="social-icons footer-info__social-icons">
-    <img class="icon-inst" src="../assets/social-instagram-icon.svg" alt="Social Instagram">
-    <img class="icon-youtube" src="../assets/social-youtube-icon.svg" alt="Social Youtube">
-    <img class="icon-vk" src="../assets/social-vk-icon.svg" alt="Social VK">
+    <img class="icon-inst" src="../../assets/social-instagram-icon.svg" alt="Social Instagram">
+    <img class="icon-youtube" src="../../assets/social-youtube-icon.svg" alt="Social Youtube">
+    <img class="icon-vk" src="../../assets/social-vk-icon.svg" alt="Social VK">
     </div>
   </div>
 
@@ -23,7 +23,3 @@ export default {
   name: 'AppFooter',
 };
 </script>
-
-<style>
-
-</style>

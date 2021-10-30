@@ -39,6 +39,7 @@
             font-weight: bolder;
 
             &::before {
+                opacity: 1;
                 position: relative;
                 content: '';
                 height: 23px;

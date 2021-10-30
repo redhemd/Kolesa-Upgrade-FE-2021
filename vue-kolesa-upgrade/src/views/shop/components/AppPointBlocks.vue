@@ -5,7 +5,7 @@
     <span>Получить баллы</span>
     </button>
 
-    <button class="how-to-accept-points">
+    <button class="how-to-accept-points" @click="$router.push('/shop/how-to-get-points')">
     <span class="how-to-accept-points__icon">❓</span>
     <span>Как получить баллы</span>
     </button>

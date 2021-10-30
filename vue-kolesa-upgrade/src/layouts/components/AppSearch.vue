@@ -6,7 +6,6 @@
         autocomplete="off"
         placeholder="Поиск"
         @input="setSearch"
-        :value="search"
       >
     </button>
   </form>
@@ -14,25 +13,32 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'AppSearch',
-  props: {
-    search: String,
+  mounted() {
+    this.fetchSearchStr();
   },
   data() {
     return {
-      searchProp: '',
     };
+  },
+  computed: {
+    ...mapState({
+      searchStr: 'searchStr',
+    }),
   },
   methods: {
     setSearch(event) {
-      this.searchProp = event.target.value;
-      this.$emit('setFromSearch', event.target.value);
+      this.$store.commit('setSearchStr', event.target.value);
+    },
+    fetchSearchStr() {
+      this.$store.dispatch('fetchSearch');
     },
   },
 };
 </script>
 
 <style>
-
 </style>

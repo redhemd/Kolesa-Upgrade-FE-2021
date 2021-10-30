@@ -65,16 +65,6 @@ export default {
       ],
     };
   },
-  // computed() {
-  //   filteredProducts() {
-  //     if (this.selectedType === 'all') return this.allProducts;
-
-  //     return this.allProducts.filter((product) => product.category === this.selectedType);
-  //   },
-  //   sortedProducts() {
-  //     return this.filteredProducts.sort(())
-  //   },
-  // },
   methods: {
     showAll() {
       this.$emit('showAllBtn');
@@ -88,7 +78,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-</style>
