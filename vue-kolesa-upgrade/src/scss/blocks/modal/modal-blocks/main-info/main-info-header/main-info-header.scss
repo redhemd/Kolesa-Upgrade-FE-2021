@@ -4,4 +4,14 @@
     align-items: flex-start;
     height: 116px;
     margin: 24px 0;
+
+    &__wrap {
+        display: flex;
+
+        & .balance-info {
+            margin-left: 250px;
+        }
+    }
+
+    
 }

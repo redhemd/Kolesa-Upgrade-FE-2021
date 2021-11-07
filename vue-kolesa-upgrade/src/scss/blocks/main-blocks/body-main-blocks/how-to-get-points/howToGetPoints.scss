@@ -1,0 +1,36 @@
+.howToGetPoints {
+  &__routes {
+    color: $blue-primary;
+  
+    &__first-text {
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:visited {
+        color: inherit;
+      }
+    }
+
+    &__second-text:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__header-text{
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+
+    &:hover {
+      color: $blue-primary;
+      cursor: pointer;
+    }
+  }
+
+  &__point-options-block {
+    margin-top: 20px;
+  }
+}
