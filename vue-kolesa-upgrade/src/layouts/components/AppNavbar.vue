@@ -37,30 +37,6 @@ export default {
           label: 'Kolesa Shop',
           isExact: false,
         },
-        // {
-        //   link: '#',
-        //   label: 'Картина компании',
-        // },
-        // {
-        //   link: '#',
-        //   label: 'Новости',
-        // },
-        // {
-        //   link: '#',
-        //   label: 'Education',
-        // },
-        // {
-        //   link: '#',
-        //   label: 'Guidelines',
-        // },
-        // {
-        //   link: '#',
-        //   label: 'Библиотека',
-        // },
-        // {
-        //   link: '#',
-        //   label: 'FAQ',
-        // },
       ],
     };
   },
